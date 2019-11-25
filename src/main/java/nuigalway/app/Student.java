@@ -28,7 +28,7 @@ public class Student {
 		return this.username;
 		
 	}
-
+	
 	public void getRegisteredModules() {
 		// TODO Auto-generated method stub
 		

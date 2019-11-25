@@ -18,8 +18,8 @@ public class App
         student1.setUsername();
         student1.getUsername();
         
-        Module module1 = new Module();
-        Module module2 = new Module();
+        Module module1 = new Module("Software III", "CT417");
+        Module module2 = new Module("Machine Learning", "CT41010");
 
         Course course = new Course();
         
