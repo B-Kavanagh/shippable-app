@@ -24,7 +24,6 @@ public class Student {
 	}
 	
 	public String getUsername() {
-		System.out.println(this.username);
 		return this.username;
 		
 	}

@@ -18,9 +18,6 @@ public class Module {
 	}
 
 	public int getStudents() {
-		for(int i = 0; i < students.size(); i++){
-			System.out.println(i+1);
-		}
 		return students.size();
 	}
 

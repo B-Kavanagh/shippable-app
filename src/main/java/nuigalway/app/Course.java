@@ -1,6 +1,11 @@
 package nuigalway.app;
 
 public class Course {
+	private String name;
+	
+	public Course(String name){
+		this.name = name;
+	}
 
 	public void add(Module module1) {
 		// TODO Auto-generated method stub

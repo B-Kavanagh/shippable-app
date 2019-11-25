@@ -3,8 +3,8 @@ package nuigalway.app;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-
 import org.junit.Test;
+import org.joda.time.DateTime;
 
 /**
  * Unit test for simple App.
@@ -38,5 +38,14 @@ public class AppTest
     	testModule.add(testStudent3);
     	
     	assertEquals(3, testModule.getStudents());
+    }
+    
+    @Test
+    public void JodaTime()
+    {
+    	//To ensure JodaTime is working
+    	DateTime date = new DateTime();
+    	assertEquals(2019, date.getYear());
+        
     }
 }
