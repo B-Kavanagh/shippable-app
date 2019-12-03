@@ -13,6 +13,10 @@ public class Module {
 		this.id = id;
 	}
 	
+	public String getName(){
+		return name;
+	}
+	
 	public void add(Student student1) {
 		students.add(student1);		
 	}

@@ -1,6 +1,7 @@
 package nuigalway.app;
 
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 /**
  * Hello world!
@@ -11,8 +12,6 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        
-        
         
         //public Student(String name, int age, String dob, int id)
         Student student1 = new Student("Bernard", 22, "05/05/1997", 14527643);
@@ -25,7 +24,9 @@ public class App
         Module module1 = new Module("Software III", "CT417");
         Module module2 = new Module("Machine Learning", "CT41010");
 
-        Course course = new Course("CS&IT");
+        LocalDate startDate  = new LocalDate( 2016 , 7 , 1 );
+        LocalDate endDate	 = new LocalDate( 2020 , 5 , 31 );
+        Course course = new Course("CS&IT", startDate, endDate);
         
         module1.add(student1);
         module1.add(student2);

@@ -1,10 +1,12 @@
 package nuigalway.app;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+
+import java.util.ArrayList;
+
 import org.junit.Test;
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 /**
  * Unit test for simple App.
@@ -16,7 +18,7 @@ public class AppTest
      */
 	
     @Test
-    public void getUsername()
+    public void getUsernameTest()
     {
     	Student testStudent = new Student("Bernard", 22, "05/05/1997", 14527643);
     	testStudent.setUsername();
@@ -25,7 +27,7 @@ public class AppTest
     }
     
     @Test
-    public void getStudents()
+    public void getStudentsTest()
     {
     	Module testModule = new Module("Software III", "CT417");
     	
@@ -47,5 +49,28 @@ public class AppTest
     	DateTime date = new DateTime();
     	assertEquals(2019, date.getYear());
         
+    }
+    
+    @Test
+    public void getModulesTest()
+    {
+    	LocalDate startDate  = new LocalDate( 2016 , 7 , 1 );
+        LocalDate endDate	 = new LocalDate( 2020 , 5 , 31 );
+        
+    	Course testCourse = new Course("IT", startDate, endDate);
+    	ArrayList<Module> testArray = new ArrayList<Module>();
+    	 
+    	Module testModule1 = new Module("Software III", "CT417");
+        Module testModule2 = new Module("Machine Learning", "CT41010");
+        
+     
+        testCourse.add(testModule1);
+        testCourse.add(testModule2);       
+        
+        testArray.add(testModule1);
+        testArray.add(testModule2);
+         
+        
+    	assertEquals(testArray, testCourse.getModules());
     }
 }
